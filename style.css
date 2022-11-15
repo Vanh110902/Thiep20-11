@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    /* background-image: url('img/back.jpg'); */
+    background-image: linear-gradient(0, gray, blue);
+    background-size: 1700px 1000px;
+    font-family: 'Roboto';
+}
+
+.container {
+    height: 30vh;
+    width: 30vw;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+}
+
+.cube {
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    top: -30;
+    left: 70;
+    transform-style: preserve-3d;
+    animation: animate 6s infinite;
+    cursor: pointer;
+}
+
+.form {
+    position: absolute;
+    font-weight: bold;
+    background-image: url('img/img-fom.jpg');
+    background-size: 300px 780px;
+    top: -100;
+    left: -300%;
+    width: 300px;
+    height: 400px;
+    border-radius: 12px;
+    transform: rotate(7deg);
+    opacity: 0;
+}
+
+.header__form {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.stop {
+    animation: none;
+}
+
+.open-box {
+    animation: tp 3s both;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotateY(0deg);
+    }
+    25% {
+        transform: rotateY(-90deg);
+    }
+    50% {
+        transform: rotateZ(90deg);
+    }
+    75% {
+        transform: rotateY(-180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes tp {
+    from {
+        left: 0;
+    }
+    to {
+        left: 350;
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+}
+
+.card {
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    text-align: center;
+    padding: 100 0;
+    color: white;
+    background: black;
+    box-sizing: border-box;
+    font-size: 20;
+    border: 1px solid lightgray;
+    background-image: url("img/backcu4.jpg");
+}
+
+.images {
+    position: absolute;
+    top: 7;
+    left: 7;
+    height: 230px;
+    width: 230px;
+    border: 2px solid silver;
+}
+
+.top {
+    bottom: 125px;
+    transform: rotateX(-90deg);
+}
+
+.left {
+    right: 125px;
+    transform: rotateY(-90deg);
+}
+
+.right {
+    left: 125px;
+    transform: rotateY(90deg);
+}
+
+.bottom {
+    top: 125px;
+    transform: rotateX(-90deg);
+}
+
+.back {
+    transform: translateZ(-125px)
+}
+
+.font {
+    transform: translateZ(125px)
+}
+
+.an {
+    display: none;
+}
+
+.opacity {
+    opacity: 0.5;
+}
+
+.mess {
+    position: absolute;
+    line-height: 38px;
+    margin: 15px 15px;
+    font-size: 20px;
+    float: left;
+    color: #FF0033;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.sp-form {
+    animation: fs 3s both;
+}
+
+@keyframes fs {
+    from {
+        left: -300%;
+        opacity: 0;
+    }
+    to {
+        left: -380px;
+        opacity: 1;
+    }
+}
+
+.show-img img {
+    position: absolute;
+    border-radius: 16px;
+    height: 310px;
+    width: 230px;
+    right: -360;
+    top: -70;
+    border: 1px solid silver;
+}
+
+.oppa-an {
+    opacity: 0;
+}
+
+.oppa-hien {
+    animation: op-hien 4s both;
+}
+
+@keyframes op-hien {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
